@@ -7,6 +7,24 @@
   font-family: 'Nunito', sans-serif;
 }
 
-body { 
- 
+li {
+  list-style: none;
+}
+
+body {
+  font-size: 1rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#search-city-form {
+  border: 1px solid green;
+  margin: 10rem auto;
+  width: 50%;
 }

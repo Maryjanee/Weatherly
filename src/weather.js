@@ -1,4 +1,6 @@
 
+const searchFrom = document.getElementById('search-city-form')
+
 class Weather {
   constructor(city){
     this.apiKey = "1a47b95fce72843fb086b93f9d54e7b8";
@@ -16,6 +18,7 @@ class Weather {
   }
   
 }
+
 
 export default Weather;
 
