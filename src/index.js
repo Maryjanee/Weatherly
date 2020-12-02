@@ -1,6 +1,12 @@
 import './style.scss';
-import './weather';
+import Weather from './weather';
 
+const appStart = () =>{
+  const weather = new Weather();
+    weather.getWeatherInfo()
+    .then(results => console.log(results))
+    .catch(error => console.log(error));          
+}
 
 
 
