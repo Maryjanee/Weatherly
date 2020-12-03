@@ -15,7 +15,7 @@ const btnsContainer = document.querySelector('.btn-container');
 const displayInfo = ({
   weather, main, sys, name,
 }) => {
-  btnsContainer.id = "show";
+  btnsContainer.id = 'show';
   resultsContainer.id = 'show';
   countryFlag.src = `https://www.countryflags.io/${sys.country}/shiny/64.png`;
   countryImg.src = `https://source.unsplash.com/1600x900/?${sys.country} city`;
