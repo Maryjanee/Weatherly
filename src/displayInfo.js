@@ -11,8 +11,8 @@ const resultsContainer = document.querySelector('.results-section');
 
 
 const displayInfo = (results) => {
-  button.style.display = 'block';
-  resultsContainer.style.display = 'block';
+  button.id= "show";
+  resultsContainer.id = "show";
   countryFlag.src = `https://www.countryflags.io/${results.sys.country}/shiny/64.png`;
   countryImg.src = `https://source.unsplash.com/1600x900/?${results.sys.country} city`;
   date.innerText = new Date().toDateString();
