@@ -16,18 +16,15 @@ searchForm.addEventListener('submit', (e) => {
     alert('please enter a valid city');
   } else {
     page.removeChild(header);
-   
+
     const weather = new Weather(cityName);
     weather.getWeatherInfo()
       .then(results => {
-        if(results.cod === 200){
+        if (results.cod === 200) {
           displayInfo(results);
-        }else{
+        } else {
           alert('there was an error');
         }
-        
-       })
+      });
   }
 });
-
-

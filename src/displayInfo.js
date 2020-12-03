@@ -10,11 +10,13 @@ const button = document.querySelector('button');
 const resultsContainer = document.querySelector('.results-section');
 const btnTempToggle = document.querySelector('.btn-temp');
 const btnTempToggle2 = document.querySelector('.btn-temp2');
+const btnsContainer = document.querySelector('.btn-container');
 
-
-const displayInfo = ({weather, main, sys, name}) => {
-  button.id= "show";
-  resultsContainer.id = "show";
+const displayInfo = ({
+  weather, main, sys, name,
+}) => {
+  btnsContainer.id = "show";
+  resultsContainer.id = 'show';
   countryFlag.src = `https://www.countryflags.io/${sys.country}/shiny/64.png`;
   countryImg.src = `https://source.unsplash.com/1600x900/?${sys.country} city`;
   date.innerText = new Date().toDateString();
@@ -23,26 +25,23 @@ const displayInfo = ({weather, main, sys, name}) => {
   description.innerText = weather[0].description;
   temperature.innerText = Math.trunc(main.temp - 273.15);
   feels.innerText = Math.trunc(main.feels_like - 273.15);
-  btnTempToggle.addEventListener('click', () =>{
-     temperature.innerText = Math.trunc(((main.temp - 273.15) * (9/5) + 32))
-     feels.innerText = Math.trunc(((main.feels_like - 273.15) * (9/5) + 32))
-     btnTempToggle.id = "hide";
-     btnTempToggle2.id = 'show';
-     
-  })
-  btnTempToggle2.addEventListener('click', () =>{
+  btnTempToggle.addEventListener('click', () => {
+    temperature.innerText = Math.trunc(((main.temp - 273.15) * (9 / 5) + 32));
+    feels.innerText = Math.trunc(((main.feels_like - 273.15) * (9 / 5) + 32));
+    btnTempToggle.id = 'hide';
+    btnTempToggle2.id = 'inline';
+  });
+  btnTempToggle2.addEventListener('click', () => {
     temperature.innerText = Math.trunc(main.temp - 273.15);
     feels.innerText = Math.trunc(main.feels_like - 273.15);
-    btnTempToggle.id = "show";
+    btnTempToggle.id = 'inline';
     btnTempToggle2.id = 'hide';
-    
- })
+  });
 };
 
 button.addEventListener('click', () => {
   window.location.reload();
 });
-
 
 
 export default displayInfo;
