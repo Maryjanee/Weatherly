@@ -53,18 +53,18 @@ label {
 #show {
   display: block;
 }
-#inline{
+
+#inline {
   display: inline-block;
 }
-
 
 .d-flex {
   display: flex;
 }
+
 .d-block {
   display: block;
 }
-
 
 .space-bw {
   justify-content: space-between;
@@ -126,9 +126,8 @@ input {
 .btn-container {
   width: 50%;
   margin: 3rem 33%;
-  display:none;
+  display: none;
 }
-
 
 .btn-temp2 {
   display: none;
