@@ -42,7 +42,9 @@ git@github.com:Maryjanee/Weatherly.git
 ```
 2. Run `cd Weatherly` to move inside the downloaded repository.
 
-3. The project contains a `package.json` file the manages its dependencies.Install them by running the command `npm install`
+3. The project contains a `package.json` file the manages its dependencies.Install them by running the command `npm install`.
+
+4.Also run `npm run-script build` and `npm start` to view the project in a web browser.
 
 
 
