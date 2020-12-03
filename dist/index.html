@@ -6,14 +6,47 @@
   <title>Weather App</title>
 </head>
 <body>
-  <h1 class="text-center">Weather Now</h1>
-  <form id="search-city-form">
-      <div class="form-content">
-        <label for="city">Enter your City Name</label>
-        <input type="text">
+  <header>
+    <h1 class="text-center">Weatherly</h1>
+    <p class="text-center">Get up to date weather information about a city of your choice</p>
+    <form id="search-city-form">
+        <div class="form-content">
+          <label for="city">Enter your City Name</label>
+          <input type="text" id="city-name">
+        </div>
+        <input id="form-search" type="submit" value="Check Weather">
+    </form>
+  </header>
+  <main>
+    <div class="results-section ">
+      <img src="" alt="" id="country-flag" >
+    <div class="d-flex space-bw align-cn mx-2">
+      <div class="country-info ">
+        <h2 class="country-name"></h2>
+        <p id="date"></p>
       </div>
-      <input type="submit" value="Check Weather">
-  </form>
+      
+      <img id="country-image">
+    </div>
+    <div class="card-temp-details d-flex space-bw align-cn mx-2 ">
+      <div>
+        <img id="weather-icon">
+        <p class="description"></p>
+      </div>
+      <div>
+        <h3 id="temperature"></h3>
+        <p> Feels like <span id="feels-like"></span><span class="degrees">&#176;</span></p>
+      </div>
+    </div>
+ 
+    
+  </main>
+  
+  
+  <div id="display-results">
+    
+  </div>
+</div>
   <script src="main.js"></script>
 </body>
 </html>

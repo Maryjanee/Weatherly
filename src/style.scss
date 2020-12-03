@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
 
+$white:#fff;
+$blue:#7AACFC;
+$text-color:#2A2C34;
+
+
 * {
   margin: 0;
   padding: 0;
@@ -7,24 +12,129 @@
   font-family: 'Nunito', sans-serif;
 }
 
+
+
 li {
   list-style: none;
 }
 
 body {
   font-size: 1rem;
+  background:#f5fcfc;
 }
 
+h1{
+  text-transform: capitalize;
+  font-weight:600;
+  font-size:4rem;
+}
+
+img{
+  width:5rem;
+  border-radius: .5rem;
+}
+
+label{
+  display:block;
+  color:$blue;
+  margin:.5rem 0;
+}
+
+.mx-2{
+  margin:1.5rem 0
+}
 .d-flex {
   display: flex;
+}
+
+.space-bw{
+  justify-content: space-between;
+}
+
+.align-cn{
+  align-items: center;
 }
 
 .text-center {
   text-align: center;
 }
 
-#search-city-form {
-  border: 1px solid green;
-  margin: 10rem auto;
-  width: 50%;
+#search-city-form,.results-section {
+  margin: 3rem auto;
+  width: 35%;
+  padding:1.5rem 2.5rem;
+  border-radius: .4rem;
+  background:$white;
+}
+
+header {
+  height:60vh;
+}
+input{
+  width:100%;
+  margin:.3rem 0;
+  padding:1rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: .4rem;
+  border:1px solid #c9c4c4;
+  cursor: pointer;
+  color:rgb(152, 148, 148);
+  
+  &:focus {
+    outline:none;
+    box-shadow: 0px 0px 11px 0px #c9c4c4;
+    padding:1rem 1.5rem;
+    color:rgb(152, 148, 148);
+  }
+  &:hover{
+    background:#f5fcfc;
+  }
+  
+
+}
+
+
+
+#form-search{
+  background:#8ea3fc;
+  border:0;
+  color:$white;
+}
+.country-name{
+  font-size: 2.5rem;
+}
+
+.results-section {
+  background:#8ea3fc;
+  margin-top:0;
+  color: #fff;
+  
+  span, p{
+    font-size: 1.3rem;
+    text-transform: capitalize;
+  }
+}
+
+
+#weather-icon{
+  
+}
+
+
+#country-flag{
+ margin-left: 20rem;
+ width:3rem;
+}
+
+#country-image{
+  width:7rem;
+  height:5rem;
+}
+
+#temperature{
+  font-size: 5rem;
+  
+  &::after {
+    content: "\00b0";
+  } 
 }
