@@ -5,7 +5,8 @@ import displayInfo from './displayInfo';
 const searchForm = document.querySelector('form');
 const page = document.querySelector('body');
 const header = document.querySelector('header');
-
+const button = document.querySelector('button');
+const results = document.querySelector('.results-section')
 
 searchForm.addEventListener('submit', (e)=> {
      e.preventDefault();
@@ -16,7 +17,9 @@ searchForm.addEventListener('submit', (e)=> {
       alert("please enter a valid city");
     }  
     else {
-     page.removeChild(header)
+     page.removeChild(header);
+     button.style.display = "block";
+     results.style.display = 'block';
       const weather = new Weather(cityName);
       weather.getWeatherInfo()
         .then(results =>{
@@ -26,7 +29,6 @@ searchForm.addEventListener('submit', (e)=> {
     }
 })
 
-
-
-
-
+button.addEventListener('click', ()=>{
+  location.reload();
+})

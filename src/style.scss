@@ -40,6 +40,11 @@ label{
   margin:.5rem 0;
 }
 
+.intro{
+  color:#1A1D26;
+  font-size:1.2rem;
+}
+
 .mx-2{
   margin:1.5rem 0
 }
@@ -108,6 +113,7 @@ input{
   background:#8ea3fc;
   margin:5rem auto;
   color: #fff;
+  display:none;
   
   
   span, p{
@@ -140,8 +146,20 @@ input{
   } 
 }
 
-.hide {
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
+
+button{
+  margin-left:43%;
+  text-align: center;
+  padding:1.5rem 2.5rem;
+  border-radius: .5rem;
+  background-image: linear-gradient(to bottom,#b0a4ff, #806ef8);
+  color:$white;
+  border:0;
+  font-size:1rem;
+  display:none;
+}
+
+.page-title{
+  color:#8E929B;
+  margin:3rem auto 2rem auto;
 }
