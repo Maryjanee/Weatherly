@@ -74,7 +74,7 @@ label {
 .results-section {
   margin: 3rem auto;
   width: 35%;
-  padding: 1.5rem 2.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 0.4rem;
   background: $white;
 }
@@ -115,6 +115,16 @@ input {
   font-size: 2.5rem;
 }
 
+.btn-container {
+  width:40%;
+  margin:3rem auto; 
+}
+
+.btn-temp2{
+  display:none;
+}
+
+
 .results-section {
   background: #8ea3fc;
   margin: 5rem auto;
@@ -146,16 +156,14 @@ input {
   }
 }
 
-button {
-  margin-left: 43%;
+.btn {
   text-align: center;
-  padding: 1.5rem 2.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 0.5rem;
   background-image: linear-gradient(to bottom, #b0a4ff, #806ef8);
   color: $white;
   border: 0;
   font-size: 1rem;
-  display: none;
   outline: none;
 }
 

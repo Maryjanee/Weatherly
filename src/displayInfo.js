@@ -8,6 +8,8 @@ const temperature = document.getElementById('temperature');
 const feels = document.getElementById('feels-like');
 const button = document.querySelector('button');
 const resultsContainer = document.querySelector('.results-section');
+const btnTempToggle = document.querySelector('.btn-temp');
+const btnTempToggle2 = document.querySelector('.btn-temp2');
 
 
 const displayInfo = ({weather, main, sys, name}) => {
@@ -21,10 +23,26 @@ const displayInfo = ({weather, main, sys, name}) => {
   description.innerText = weather[0].description;
   temperature.innerText = Math.trunc(main.temp - 273.15);
   feels.innerText = Math.trunc(main.feels_like - 273.15);
+  btnTempToggle.addEventListener('click', () =>{
+     temperature.innerText = Math.trunc(((main.temp - 273.15) * (9/5) + 32))
+     feels.innerText = Math.trunc(((main.feels_like - 273.15) * (9/5) + 32))
+     btnTempToggle.id = "hide";
+     btnTempToggle2.id = 'show';
+     
+  })
+  btnTempToggle2.addEventListener('click', () =>{
+    temperature.innerText = Math.trunc(main.temp - 273.15);
+    feels.innerText = Math.trunc(main.feels_like - 273.15);
+    btnTempToggle.id = "show";
+    btnTempToggle2.id = 'hide';
+    
+ })
 };
 
 button.addEventListener('click', () => {
   window.location.reload();
 });
+
+
 
 export default displayInfo;
