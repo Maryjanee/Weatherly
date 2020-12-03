@@ -1,10 +1,13 @@
 # Weatherly
 
 
-> Weatherly is a application that fetches information from the Openweather API and displays the information about the current weather in any of the world's major cities.
+> Weatherly is a application that fetches data from the Openweather API and displays the information about the current weather in any of the world's major cities.
 
 
 ![Results Page](src/images/weatherly.png)
+
+
+[Live Demo](https://rawcdn.githack.com/Maryjanee/Weatherly/3046e8b867f1acfdb4933dfec29c230816b28c56/dist/index.html).
 
 ## Built With
 
@@ -18,10 +21,17 @@
 
 
 
+
+
+
 ### Prerequisites
 
 - npm  6.14.8
 - Webpack 5.4
+
+
+
+
 
 
 ### Setup
@@ -33,6 +43,10 @@ git@github.com:Maryjanee/Weatherly.git
 2. Run `cd Weatherly` to move inside the downloaded repository.
 
 3. The project contains a `package.json` file the manages its dependencies.Install them by running the command `npm install`
+
+
+
+
 
 
 
