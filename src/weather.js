@@ -6,9 +6,13 @@ class Weather {
   }
 
   async getWeatherInfo() {
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${this.apiKey}`);
-    const responseData = await response.json();
-    return responseData;
+        try {
+          const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${this.apiKey}`);
+          const responseData = await response.json();
+          return await responseData;
+      } catch (e) {
+          throw e;
+      }
   }
 
   changeCity(city) {

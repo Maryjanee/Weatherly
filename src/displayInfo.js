@@ -6,9 +6,13 @@ const weatherIcon = document.getElementById('weather-icon');
 const description = document.querySelector('.description');
 const temperature = document.getElementById('temperature');
 const feels = document.getElementById('feels-like');
+const button = document.querySelector('button');
+const resultsContainer = document.querySelector('.results-section');
 
 
 const displayInfo = (results) => {
+  button.style.display = 'block';
+  resultsContainer.style.display = 'block';
   countryFlag.src = `https://www.countryflags.io/${results.sys.country}/shiny/64.png`;
   countryImg.src = `https://source.unsplash.com/1600x900/?${results.sys.country} city`;
   date.innerText = new Date().toDateString();
@@ -18,5 +22,9 @@ const displayInfo = (results) => {
   temperature.innerText = Math.trunc(results.main.temp - 273.15);
   feels.innerText = Math.trunc(results.main.feels_like - 273.15);
 };
+
+button.addEventListener('click', () => {
+  window.location.reload();
+});
 
 export default displayInfo;
