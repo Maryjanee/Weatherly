@@ -7,7 +7,7 @@
 ![Results Page](src/images/weatherly.png)
 
 
-[Live Demo](https://rawcdn.githack.com/Maryjanee/Weatherly/3046e8b867f1acfdb4933dfec29c230816b28c56/dist/index.html).
+[Live Demo](https://raw.githack.com/Maryjanee/Weatherly/app/dist/index.html).
 
 ## Built With
 
