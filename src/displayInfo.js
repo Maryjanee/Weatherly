@@ -10,17 +10,17 @@ const button = document.querySelector('button');
 const resultsContainer = document.querySelector('.results-section');
 
 
-const displayInfo = (results) => {
+const displayInfo = ({weather, main, sys, name}) => {
   button.id= "show";
   resultsContainer.id = "show";
-  countryFlag.src = `https://www.countryflags.io/${results.sys.country}/shiny/64.png`;
-  countryImg.src = `https://source.unsplash.com/1600x900/?${results.sys.country} city`;
+  countryFlag.src = `https://www.countryflags.io/${sys.country}/shiny/64.png`;
+  countryImg.src = `https://source.unsplash.com/1600x900/?${sys.country} city`;
   date.innerText = new Date().toDateString();
-  country.innerText = results.name;
-  weatherIcon.src = `http://openweathermap.org/img/w/${results.weather[0].icon}.png`;
-  description.innerText = results.weather[0].description;
-  temperature.innerText = Math.trunc(results.main.temp - 273.15);
-  feels.innerText = Math.trunc(results.main.feels_like - 273.15);
+  country.innerText = name;
+  weatherIcon.src = `http://openweathermap.org/img/w/${weather[0].icon}.png`;
+  description.innerText = weather[0].description;
+  temperature.innerText = Math.trunc(main.temp - 273.15);
+  feels.innerText = Math.trunc(main.feels_like - 273.15);
 };
 
 button.addEventListener('click', () => {
