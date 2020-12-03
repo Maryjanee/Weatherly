@@ -106,8 +106,9 @@ input{
 
 .results-section {
   background:#8ea3fc;
-  margin-top:0;
+  margin:5rem auto;
   color: #fff;
+  
   
   span, p{
     font-size: 1.3rem;
@@ -137,4 +138,10 @@ input{
   &::after {
     content: "\00b0";
   } 
+}
+
+.hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
 }
