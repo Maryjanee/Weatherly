@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
+
+$white:#fff;
+$blue:#7aacfc;
+$text-color:#2a2c34;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-size: 1rem;
+  background: #f5fcfc;
+}
+
+h1 {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+img {
+  width: 5rem;
+  border-radius: 0.5rem;
+}
+
+label {
+  display: block;
+  color: $blue;
+  margin: 0.5rem 0;
+}
+
+.intro {
+  color: #1a1d26;
+  font-size: 1.2rem;
+}
+
+.mx-2 {
+  margin: 1.5rem 0;
+}
+
+#hide {
+  display: none;
+}
+
+#show {
+  display: block;
+}
+
+#inline {
+  display: inline-block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.space-bw {
+  justify-content: space-between;
+}
+
+.align-cn {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.error,
+.success {
+  color: $white;
+  width: 50%;
+  padding: 1.5rem;
+  margin: 5px auto;
+  border-radius: 0.4rem;
+}
+
+.error {
+  background: #f56a79;
+}
+
+.success {
+  background: #557571;
+}
+
+#search-city-form,
+.results-section {
+  margin: 3rem auto;
+  width: 35%;
+  padding: 1rem 1.5rem;
+  border-radius: 0.4rem;
+  background: $white;
+}
+
+header {
+  height: 60vh;
+}
+
+input {
+  width: 100%;
+  margin: 0.3rem 0;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 0.4rem;
+  border: 1px solid #c9c4c4;
+  cursor: pointer;
+  color: rgb(152, 148, 148);
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 11px 0 #c9c4c4;
+    padding: 1rem 1.5rem;
+    color: rgb(152, 148, 148);
+  }
+
+  &:hover {
+    background: #f5fcfc;
+  }
+}
+
+#form-search {
+  background: #8ea3fc;
+  border: 0;
+  color: $white;
+}
+
+.country-name {
+  font-size: 2.5rem;
+}
+
+.btn-container {
+  width: 50%;
+  margin: 3rem 33%;
+  display: none;
+}
+
+.btn-temp2 {
+  display: none;
+}
+
+.results-section {
+  background: #8ea3fc;
+  margin: 5rem auto;
+  color: #fff;
+  display: none;
+
+  span,
+  p {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+  }
+}
+
+#country-flag {
+  margin-left: 20rem;
+  width: 3rem;
+}
+
+#country-image {
+  width: 7rem;
+  height: 5rem;
+}
+
+#temperature {
+  font-size: 5rem;
+
+  &::after {
+    content: "\00b0";
+  }
+}
+
+.btn {
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(to bottom, #b0a4ff, #806ef8);
+  color: $white;
+  border: 0;
+  font-size: 1rem;
+  outline: none;
+}
+
+.page-title {
+  color: #8e929b;
+  margin: 3rem auto 2rem auto;
+}
