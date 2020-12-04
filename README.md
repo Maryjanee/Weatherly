@@ -4,10 +4,10 @@
 > Weatherly is a application that fetches data from the Openweather API and displays the information about the current weather in any of the world's major cities.
 
 
-![Results Page](src/images/weatherly.png)
+![Results Page](src/images/weatherly2.png)
 
 
-[Live Demo](https://raw.githack.com/Maryjanee/Weatherly/app/dist/index.html).
+[Live Demo](https://rawcdn.githack.com/Maryjanee/Weatherly/362cecffc38f95cc9c54bf9d86926e4824bad4bc/dist/index.html).
 
 ## Built With
 
