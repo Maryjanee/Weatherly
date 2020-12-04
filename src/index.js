@@ -1,6 +1,6 @@
 import './style.scss';
 import Weather from './weather';
-import {showAlert, displayInfo} from './displayInfo'
+import { showAlert, displayInfo } from './displayInfo';
 
 const searchForm = document.querySelector('form');
 const page = document.querySelector('body');
@@ -25,7 +25,6 @@ searchForm.addEventListener('submit', (e) => {
           showAlert('Success! Here are your results', 'success');
         } else {
           showAlert('There was an error, please select a new city', 'error');
-          
         }
       });
   }

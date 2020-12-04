@@ -43,18 +43,17 @@ button.addEventListener('click', () => {
   window.location.reload();
 });
 
-  const showAlert = (message, className) =>{
+const showAlert = (message, className) => {
   const alertDiv = document.createElement('div');
   alertDiv.className = `alert ${className}`;
   alertDiv.appendChild(document.createTextNode(message));
   const container = document.querySelector('body');
   const h1 = document.querySelector('h1');
   container.insertBefore(alertDiv, h1);
-  setTimeout(function(){
+  setTimeout(() => {
     document.querySelector('.alert').remove();
   }, 3000);
-}
+};
 
 
-
-export {showAlert, displayInfo};
+export { showAlert, displayInfo };
