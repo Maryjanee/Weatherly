@@ -23,8 +23,9 @@ searchForm.addEventListener('submit', (e) => {
         if (results.cod === 200) {
           displayInfo(results);
           showAlert('Success! Here are your results', 'success');
-        } else {
-          showAlert('There was an error, please select a new city', 'error');
+        } else { 
+           showAlert('There was an error, please select a new city', 'error');
+           setTimeout(() => location.reload(), 3000);
         }
       });
   }
