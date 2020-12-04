@@ -1,6 +1,6 @@
 import './style.scss';
 import Weather from './weather';
-import displayInfo from './displayInfo';
+import {showAlert, displayInfo} from './displayInfo'
 
 const searchForm = document.querySelector('form');
 const page = document.querySelector('body');
@@ -13,7 +13,7 @@ searchForm.addEventListener('submit', (e) => {
   const cityName = document.querySelector('#city-name').value;
 
   if (cityName === '') {
-    alert('please enter a valid city');
+    showAlert('please enter a valid city', 'error');
   } else {
     page.removeChild(header);
 
@@ -22,8 +22,10 @@ searchForm.addEventListener('submit', (e) => {
       .then(results => {
         if (results.cod === 200) {
           displayInfo(results);
+          showAlert('Success! Here are your results', 'success');
         } else {
-          alert('there was an error');
+          showAlert('There was an error, please select a new city', 'error');
+          
         }
       });
   }

@@ -21,7 +21,7 @@ const displayInfo = ({
   countryImg.src = `https://source.unsplash.com/1600x900/?${sys.country} city`;
   date.innerText = new Date().toDateString();
   country.innerText = name;
-  weatherIcon.src = `http://openweathermap.org/img/w/${weather[0].icon}.png`;
+  weatherIcon.src = `https://openweathermap.org/img/w/${weather[0].icon}.png`;
   description.innerText = weather[0].description;
   temperature.innerText = Math.trunc(main.temp - 273.15);
   feels.innerText = Math.trunc(main.feels_like - 273.15);
@@ -43,5 +43,18 @@ button.addEventListener('click', () => {
   window.location.reload();
 });
 
+  const showAlert = (message, className) =>{
+  const alertDiv = document.createElement('div');
+  alertDiv.className = `alert ${className}`;
+  alertDiv.appendChild(document.createTextNode(message));
+  const container = document.querySelector('body');
+  const h1 = document.querySelector('h1');
+  container.insertBefore(alertDiv, h1);
+  setTimeout(function(){
+    document.querySelector('.alert').remove();
+  }, 3000);
+}
 
-export default displayInfo;
+
+
+export {showAlert, displayInfo};
